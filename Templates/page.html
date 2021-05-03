@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<head>
+<title>Page Title</title>
+
+<h1>Credit Card Fraud Detection</h1>
+
+<body>
+    <form action='/predict' method="post" class="col s12">
+      
+            <label for="variance"><b>variance</b></label>
+            <br>
+          <input placeholder="Enter First input parameter" name="variance" id="variance" type="text" required>
+                  
+            <br><br>
+            <label for="skewness"><b>skewness</b></label>
+            <br>
+          <input placeholder="Enter Second input parameter" name="skewness" id="skewness" type="text" required>
+
+                    <br><br>
+                                <label for="curtosis"><b>curtosis</b></label>
+            <br>
+          <input placeholder="Enter THIRD input parameter" name="curtosis" id="curtosis" type="text" required>
+
+                    <br><br>
+                                <label for="entropy"><b>entropy</b></label>
+            <br>
+          <input placeholder="Enter FOURTH input parameter" name="entropy" id="entropy" type="text" required>
+
+                    <br><br>
+                                
+
+                  <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      
+    </form>
+<br><br>
+
+<h3> Predicted output is :: </h3>
+<br>
+{{predicted_text}}
+<br>
+
+
+</body>
+</html>
